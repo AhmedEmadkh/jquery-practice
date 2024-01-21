@@ -33,7 +33,7 @@ $(document).ready(function () {
     format: "H", // Display only hours
     onTick: function (event) {
       if (event[4] > 60) {
-        let hoursWithinDay = Math.floor(event[4] % 60);
+        let hoursWithinDay = Math.floor(event[4] % 24);
         $(this).html(`${hoursWithinDay} <span class="label"> H</span>`);
       }
     },
